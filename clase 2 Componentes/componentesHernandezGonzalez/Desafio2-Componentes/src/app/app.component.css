@@ -1,0 +1,11 @@
+.grid-toolbar{
+  width: 100%;
+}
+.grid-container{
+    width: auto;
+    display: inline-flex;
+}
+.grid-navbar{
+      width: auto;
+    display: inline-block;
+}
