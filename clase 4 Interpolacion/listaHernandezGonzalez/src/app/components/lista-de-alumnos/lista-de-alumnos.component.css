@@ -1,0 +1,17 @@
+.calificacion-buena{
+    background-color: #59db9f87;
+    color: #323131;
+    text-align: center;
+}
+.calificacion-mala{
+	        background-color: #e33b1487;
+    color: #fff;
+    text-align: center;
+}
+.container-table{
+	    margin-top: 50px;
+}
+.thead-dark{
+	        background-color: #323131;
+    color: #fff;
+}

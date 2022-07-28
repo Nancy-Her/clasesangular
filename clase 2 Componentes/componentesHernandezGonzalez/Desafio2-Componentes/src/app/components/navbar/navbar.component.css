@@ -2,9 +2,7 @@
 .list-group-item-light.list-group-item-action:focus, .list-group-item-light.list-group-item-action:hover{
      color: #ff6f61;
 }
-.navbar-brand{
-  color: #ff6f61;
-}
+
 #sidebar-wrapper {
   min-height: 100vh;
   margin-left: -15rem;
