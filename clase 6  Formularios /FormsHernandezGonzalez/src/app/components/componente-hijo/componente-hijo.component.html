@@ -1,0 +1,67 @@
+
+	<div class="container ">
+<form  [formGroup]= "formulario" (ngSubmit)="submit()" class="highlight">
+
+	  <div class="form-row">
+	    <div class="form-group col-md-6 col-sm-12">
+	     
+			  <label  class="form-label">Nombre</label>
+			  <input type="text" class="form-control" formControlName="nombre">
+			  <div *ngIf="!formulario.invalid" class="alert alert-success" role="alert">correcto</div>
+			  <div *ngIf="formulario.get('nombre')?.errors?.['required'] && formulario.get('nombre')?.touched" class="alert alert-danger" role="alert">
+  Este elemento es obligatorio
+</div>
+		
+	    </div>
+	    <div class="form-group col-md-6 col-sm-12">
+	      
+			  <label  class="form-label">Apellidos</label>
+			  <input type="text" class="form-control" formControlName="apellido">
+			  <div *ngIf="!formulario.invalid" class="alert alert-success" role="alert">correcto</div>
+			  <div *ngIf="formulario.get('apellido')?.errors?.['required'] && formulario.get('apellido')?.touched" class="alert alert-danger" role="alert">
+  Este elemento es obligatorio
+</div>
+			
+	    </div>
+	    </div>
+	    <div class="form-row">
+	    <div class="form-group col-md-6 col-sm-12">
+	     
+			  <label  class="form-label">Edad</label>
+			  <input type="text" class="form-control" formControlName="edad">
+			  <div *ngIf="!formulario.invalid" class="alert alert-success" role="alert">correcto</div>
+			  <div *ngIf="formulario.get('edad')?.errors?.['required'] && formulario.get('edad')?.touched" class="alert alert-danger" role="alert">Este elemento es obligatorio</div>
+			  <div *ngIf="formulario.get('edad')?.errors?.['pattern'] && formulario.get('edad')?.touched" class="alert alert-danger" role="alert">Este campo debe ser numérico</div>
+			  <div *ngIf="formulario.get('edad')?.errors?.['max'] && formulario.get('edad')?.touched" class="alert alert-danger" role="alert">Este campo debe ser menor a 110</div>
+		
+	    </div>
+
+	    <div class="form-group col-md-6 col-sm-12">
+	     
+			  <label  class="form-label">Correo</label>
+			  <input type="text" class="form-control" formControlName="correo">
+			  <div *ngIf="!formulario.invalid" class="alert alert-success" role="alert">correcto</div>
+			  <div *ngIf="formulario.get('correo')?.errors?.['required'] && formulario.get('correo')?.touched" class="alert alert-danger" role="alert">Este campo es obligatorio</div>
+			  <div *ngIf="formulario.get('correo')?.errors?.['email'] && formulario.get('correo')?.touched" class="alert alert-danger" role="alert">Este campo debe tener un formato de correo</div>
+			 
+			
+	    </div>
+	  </div>
+	  <div class="form-group col-md-12 col-sm-12">
+	     
+			  <label  class="form-label">Dirección</label>
+			  <input type="text" class="form-control" formControlName="direccion">
+			  <div *ngIf="!formulario.invalid" class="alert alert-success" role="alert">correcto</div>
+			  <div *ngIf="formulario.get('direccion')?.errors?.['minlength'] && formulario.get('direccion')?.touched" class="alert alert-danger" role="alert">Este campo debe tener más de 8 caracteres</div>
+	
+			 
+			
+	    </div>
+	  <div class="row">
+	  	<button type="submit" class="btn btn-primary">ENVIAR</button>
+	 
+	  </div>
+	
+</form>
+</div>
+
