@@ -1,0 +1,10 @@
+.content-menu{
+	    background-color: #303030;
+    color: #fff;
+    height: 60px;
+    border-bottom: 1px solid #fff;
+    vertical-align: middle;
+}
+.content-menu button{
+        margin: 10px;
+}

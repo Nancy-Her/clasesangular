@@ -1,0 +1,17 @@
+.container-table-editar .mat-form-field{
+width: 100%;
+}
+.container-table-editar .alert-danger{
+    background-color: inherit;
+    border: none;
+    padding: 0px;
+    color: #f44336;
+    margin-bottom: 0px;
+}
+.container-table-editar .alert-success{
+ background-color: inherit;
+    border: none;
+    padding: 0px;
+    color: #69f0ae;
+    margin-bottom: 0px;
+}
