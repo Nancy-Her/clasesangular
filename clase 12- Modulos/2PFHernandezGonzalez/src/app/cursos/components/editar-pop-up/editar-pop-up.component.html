@@ -1,0 +1,36 @@
+<h1 mat-dialog-title appResaltado>Editar curso</h1>
+
+<div class="container container-table-editar">
+
+
+    <div mat-dialog-content>
+    <form [formGroup]="formulario">
+        <mat-form-field appearance="fill">
+            <mat-label>Curso</mat-label>
+            <input formControlName="curso" matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Categoría</mat-label>
+            <input formControlName="categoria" matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Duracion</mat-label>
+            <input formControlName="duracion" matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Nivel</mat-label>
+            <input formControlName="nivel" matInput>
+        </mat-form-field>
+   
+
+        <!-- <mat-slide-toggle formControlName="matriculaAbierta">Matrícula abierta</mat-slide-toggle> -->
+    </form>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="cerrar()">Cerrar</button>
+    <button mat-raised-button color="primary" (click)="actualizar()">Actualizar</button>
+</div>
+</div>

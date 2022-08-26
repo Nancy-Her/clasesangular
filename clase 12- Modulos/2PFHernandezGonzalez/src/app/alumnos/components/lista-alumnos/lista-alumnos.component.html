@@ -1,0 +1,63 @@
+
+<div class="container container-table">
+
+  <mat-form-field>
+
+    <mat-label>Buscar</mat-label>
+    <input type="text" (keyup)="filtrar($event)" matInput>
+</mat-form-field>
+
+  <button class="float-right" mat-raised-button color="primary" (click)="openDialog()"><mat-icon>assignment_ind</mat-icon> Agregar Alumnos</button>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table table">
+
+  <ng-container matColumnDef="nombre">
+    <th mat-header-cell *matHeaderCellDef appResaltado>Nombre</th>
+    <td mat-cell *matCellDef="let element">{{element.nombre }}</td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="apellido" >
+    <th mat-header-cell *matHeaderCellDef appResaltado>Apellido</th>
+    <td mat-cell *matCellDef="let element">{{element.apellido}}</td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="telefono">
+    <th mat-header-cell *matHeaderCellDef appResaltado>Teléfono</th>
+    <td mat-cell *matCellDef="let element">{{element.telefono }}</td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="correo">
+    <th mat-header-cell *matHeaderCellDef appResaltado>Correo</th>
+    <td mat-cell *matCellDef="let element">{{element.correo}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="curso">
+    <th mat-header-cell *matHeaderCellDef appResaltado>Curso</th>
+    <td mat-cell *matCellDef="let element">{{element.curso}}</td>
+  </ng-container>
+
+  <!-- Columna Acciones -->
+    <ng-container matColumnDef="acciones">
+        <th mat-header-cell *matHeaderCellDef appResaltado>Acciones</th>
+        <td mat-cell *matCellDef="let element" class="btn-column">
+            <button  mat-icon-button appResaltado (click)="editar(element)">
+          <mat-icon>edit</mat-icon>
+        </button>
+            <button  mat-icon-button appResaltado (click)="eliminar(element)">
+          <mat-icon>delete</mat-icon>
+        </button>
+        </td>
+    </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+  <tr mat-row *matRowDef="let row; columns: columnas;"></tr>
+</table>
+
+
+
+
+
+
+
