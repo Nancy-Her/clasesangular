@@ -1,0 +1,32 @@
+<div class="container container-table">
+<h4>Lista Cursos</h4>
+
+<button class="float-right" mat-raised-button color="primary" (click)="openDialog()"><mat-icon>assignment_ind</mat-icon> Agregar Curso</button>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col" appResaltado>Id</th>
+      <th scope="col" appResaltado>Curso</th>
+      <th scope="col" appResaltado>Profesor</th>
+      <th scope="col" appResaltado>Fechas</th>
+      <th scope="col" appResaltado>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let curso of cursos$ | async">
+      <th scope="row">{{ curso.id }}</th>
+      <td>{{ curso.nombre }}</td>
+      <td>{{ curso.profesor }}</td>
+      <td>{{ curso.fechaInicio | date: 'dd/MM/yyyy' }} al {{ curso.fechaFin | date: 'dd/MM/yyyy' }}</td>
+      <td>
+        <button mat-icon-button color="primary" (click)="abrirDialog(curso)"><mat-icon>edit</mat-icon></button>
+        <button mat-icon-button color="primary" (click)="eliminar(curso.id)"><mat-icon>delete</mat-icon></button>
+        
+      </td>
+    </tr>
+  
+  </tbody>
+</table>
+
+
+</div>

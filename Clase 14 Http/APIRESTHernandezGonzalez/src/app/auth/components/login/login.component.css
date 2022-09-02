@@ -1,0 +1,19 @@
+.content-form{
+width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #fbfbfb;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    border-radius: 3px;
+}
+.content-form mat-form-field{
+	width: 100%;
+}
+.content-form mat-card-title{
+    position: relative;
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+}

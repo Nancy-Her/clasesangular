@@ -1,0 +1,21 @@
+.container-table{
+	margin-top: 50px;
+}
+.btn-column button{
+    margin: 5px;
+}
+tr.mat-row, tr.mat-footer-row{
+	    vertical-align: baseline;
+}
+tr.mat-header-row{
+	    vertical-align: middle;
+}
+.float-right{
+   float: right;
+}
+.container.container-table{
+    width: calc(100% - 245px);
+    max-width: 100%;
+    margin-left: 245px;
+        padding: 0px 42px;
+}

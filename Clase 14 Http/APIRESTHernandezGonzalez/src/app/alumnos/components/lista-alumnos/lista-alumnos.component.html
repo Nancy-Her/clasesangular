@@ -1,0 +1,36 @@
+<div class="container container-table">
+<h4>Lista Alumnos</h4>
+
+<button class="float-right" mat-raised-button color="primary" (click)="openDialog()"><mat-icon>assignment_ind</mat-icon> Agregar Alumnos</button>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col" appResaltado>ID</th>
+          <th scope="col" appResaltado>Nombre</th>
+          <th scope="col" appResaltado>Apellidos</th>
+          <th scope="col" appResaltado>Teléfono</th>
+          <th scope="col" appResaltado>Correo</th>
+          <th scope="col" appResaltado>Curso</th>
+          <th scope="col" appResaltado>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let alumno of alumnos$ | async">
+          <th scope="row">{{ alumno.id }}</th>
+          <td>{{ alumno.nombre }}</td>
+          <td>{{ alumno.apellidos }}</td>
+          <td>{{ alumno.telefono }}</td>
+          <td>{{ alumno.correo }}</td>
+          <td>{{ alumno.curso }}</td>
+          <td>
+            <button mat-icon-button color="primary" (click)="abrirDialog(alumno)"><mat-icon>edit</mat-icon></button>
+            <button mat-icon-button color="primary" (click)="eliminar(alumno.id)"><mat-icon>delete</mat-icon></button>
+            
+          </td>
+        </tr>
+      
+      </tbody>
+    </table>
+
+
+</div>

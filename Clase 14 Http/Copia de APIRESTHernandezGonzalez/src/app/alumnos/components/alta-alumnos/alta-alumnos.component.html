@@ -1,0 +1,57 @@
+<h1 mat-dialog-title appResaltado>Registro de Alumnos</h1>
+
+<div class="container container-table-editar">
+
+
+
+    <form [formGroup]="formulario" (ngSubmit)="registro()">
+        <mat-form-field appearance="fill">
+            <mat-label>Nombre</mat-label>
+            <input formControlName="nombre" matInput>
+            <div *ngIf="!formulario.invalid" class="alert alert-success" role="alert">correcto</div>
+            <div *ngIf="formulario.get('nombre')?.errors?.['required'] && formulario.get('nombre')?.touched" class="alert alert-danger" role="alert">Este elemento es obligatorio</div>
+        
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Apellido</mat-label>
+            <input formControlName="apellido" matInput>
+              <div *ngIf="!formulario.invalid" class="alert alert-success" role="alert">correcto</div>
+              <div *ngIf="formulario.get('apellido')?.errors?.['required'] && formulario.get('apellido')?.touched" class="alert alert-danger" role="alert">Este elemento es obligatorio</div>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Teléfono</mat-label>
+            <input formControlName="telefono" matInput>
+            <div *ngIf="!formulario.invalid" class="alert alert-success" role="alert">correcto</div>
+            <div *ngIf="formulario.get('telefono')?.errors?.['pattern'] && formulario.get('telefono')?.touched" class="alert alert-danger" role="alert">Este campo debe ser numérico</div>
+            <div *ngIf="formulario.get('telefono')?.errors?.['minlength'] && formulario.get('telefono')?.touched" class="alert alert-danger" role="alert">Este campo debe tener mínimo 10 caracteres</div>
+            <div *ngIf="formulario.get('telefono')?.errors?.['maxLength'] && formulario.get('telefono')?.touched" class="alert alert-danger" role="alert">Este campo debe tener máximo 10 caracteres</div>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Correo</mat-label>
+            <input formControlName="correo" matInput>
+             <div *ngIf="!formulario.invalid" class="alert alert-success" role="alert">correcto</div>
+              <div *ngIf="formulario.get('correo')?.errors?.['required'] && formulario.get('correo')?.touched" class="alert alert-danger" role="alert">Este campo es obligatorio</div>
+              <div *ngIf="formulario.get('correo')?.errors?.['email'] && formulario.get('correo')?.touched" class="alert alert-danger" role="alert">Este campo debe tener un formato de correo</div>
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Curso</mat-label>
+            <input formControlName="curso" matInput>
+            <div *ngIf="!formulario.invalid" class="alert alert-success" role="alert">correcto</div>
+            <div *ngIf="formulario.get('curso')?.errors?.['required'] && formulario.get('curso')?.touched" class="alert alert-danger" role="alert">Este elemento es obligatorio</div>
+        </mat-form-field>
+
+  
+        <button type="submit" class="btn btn-primary"  mat-raised-button color="primary" [disabled]="!formulario.valid">ENVIAR</button>
+           
+
+    </form>
+
+
+ 
+     
+      
+
+</div>

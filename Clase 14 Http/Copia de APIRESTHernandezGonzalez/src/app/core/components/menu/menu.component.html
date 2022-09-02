@@ -1,0 +1,25 @@
+
+
+
+<!-- 
+ {{ sesion$ | async | json }} <br> -->
+
+<ng-container *ngIf="sesion$ | async as sesion" >
+  <div class="border-end bg-white" id="sidebar-wrapper">
+  <div *ngIf="sesion.sesionActiva" class="list-group list-group-flush">
+    <div class="list-group list-group-flush">
+        <a class="list-group-item list-group-item-action list-group-item-light p-3" routerLink="/"><mat-icon>home</mat-icon></a>
+        <a class="list-group-item list-group-item-action list-group-item-light p-3" routerLink="cursos/listaCursos">Cursos</a> 
+        <a class="list-group-item list-group-item-action list-group-item-light p-3" routerLink="alumnos/listaAlumnos"> Alumnos</a> 
+        <a class="list-group-item list-group-item-action list-group-item-light p-3" routerLink="clases/listaClases">Clases</a> 
+        <a class="list-group-item list-group-item-action list-group-item-light p-3"routerLink="/auth/login"><mat-icon>account_circle</mat-icon><span>Login</span></a> 
+        <a class="list-group-item list-group-item-action list-group-item-light p-3" (click)="cerrarSesion()"><mat-icon>highlight_off</mat-icon><span>Cerrar sesion</span></a>
+    </div>
+  </div>
+  </div>
+</ng-container>
+<router-outlet></router-outlet>
+
+
+
+ 
