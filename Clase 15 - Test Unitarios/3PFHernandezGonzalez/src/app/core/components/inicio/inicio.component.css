@@ -1,0 +1,6 @@
+.container.container-table{
+    width: calc(100% - 245px);
+    max-width: 100%;
+    margin-left: 245px;
+        padding: 0px 42px;
+}

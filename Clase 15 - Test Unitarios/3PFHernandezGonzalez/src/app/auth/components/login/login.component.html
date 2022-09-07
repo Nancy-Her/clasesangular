@@ -1,0 +1,28 @@
+
+
+    <mat-card-content class="content-form">
+        <mat-card-title>Login</mat-card-title>
+        <form [formGroup]="formulario" (ngSubmit)="login()" >
+           
+             <mat-form-field  appearance="fill">
+              <input type="text" placeholder="Nombre de usuario" formControlName="usuario" matInput>
+              <div *ngIf="formulario.get('usuario')?.errors?.['required'] && formulario.get('usuario')?.touched">Campo requerido</div>
+
+            </mat-form-field>
+             <mat-form-field  appearance="fill">
+             <input type="password" placeholder="Contraseña" formControlName="contrasena" matInput>
+             <div *ngIf="formulario.get('contrasena')?.errors?.['required'] && formulario.get('contrasena')?.touched">Campo requerido</div>
+
+             
+
+          
+            
+            </mat-form-field>
+           
+
+            <button type="submit" mat-raised-button color="primary" >Login</button>
+        </form>
+    </mat-card-content>
+
+
+
